@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,11 @@
     <title>PPI Calculator</title>
     <link rel="stylesheet" href="index.css">
 </head>
-<body>
+
+<body>aa
     <script>
 
-var ppi = 100;
+        var ppi = 100;
         var table = document.createElement("table");
         var header = "<tr> <th> ratio </th> <th> 3:2 </th> <th> 16:9 </th> <th> 21:9 </th></tr>";
         table.innerHTML = header;
@@ -23,27 +25,27 @@ var ppi = 100;
             row.append(tdInch);
 
 
-            var height = Math.round(Math.sqrt(inch*inch * (4/13))*100);
-            var width = Math.round(height * (3/2));
+            var height = Math.round(Math.sqrt(inch * inch * (4 / 13)) * 100);
+            var width = Math.round(height * (3 / 2));
             var tdSize = document.createElement("td");
-            tdSize.innerHTML = width +" x "+ height;
+            tdSize.innerHTML = width + " x " + height;
             row.append(tdSize);
 
 
 
-            height = Math.round(Math.sqrt(inch*inch * (81/337))*100);
-            width = Math.round(height * (16/9));
+            height = Math.round(Math.sqrt(inch * inch * (81 / 337)) * 100);
+            width = Math.round(height * (16 / 9));
             tdSize = document.createElement("td");
-            tdSize.innerHTML = width +" x "+ height
+            tdSize.innerHTML = width + " x " + height
             row.append(tdSize);
 
             // height = Math.round(Math.sqrt(inch*inch * (81/337))*100);
             // width = Math.round(height * (16/9));
 
-            height = Math.round(Math.sqrt(inch*inch * (81/552))*100);
-            width = Math.round(height * (21/9));
+            height = Math.round(Math.sqrt(inch * inch * (81 / 552)) * 100);
+            width = Math.round(height * (21 / 9));
             tdSize = document.createElement("td");
-            tdSize.innerHTML = width +" x "+ height;
+            tdSize.innerHTML = width + " x " + height;
             row.append(tdSize);
 
             table.append(row);
@@ -51,4 +53,5 @@ var ppi = 100;
         document.getElementsByTagName("body")[0].append(table)
     </script>
 </body>
+
 </html>
